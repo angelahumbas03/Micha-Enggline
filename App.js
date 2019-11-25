@@ -1,21 +1,31 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import ComponentScreen from './screens/ComponentScreen';
-import StudentScreen from './screens/StudentScreen';
-import CobaScreen from './screens/CobaScreen';
+import HomeScreen from './screens/HomeScreen';
+import AboutScreen from './screens/AboutScreen';
 
-export default function App() {
-  return (
-    
-      <CobaScreen /> 
-    
-  );
-}
+import { createStackNavigator, createAppContainer } from 'react-navigation';
+
+
+const navigator = createStackNavigator({
+  Component: ComponentScreen,
+  Home: HomeScreen,
+  About: AboutScreen
+
+
+},{
+  initialRouteName: 'Home',
+  defaultNavigationOptions: {
+    headerTitle: 'Pakaian Adat Sulut APP'
+  }
+});
+
+export default createAppContainer(navigator);
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffff',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
