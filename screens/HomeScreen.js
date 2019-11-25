@@ -1,18 +1,33 @@
-import React from 'react'
-import { View, Text, Button } from 'react-native';
+import React from 'react';
+import { View, Text, Button, ImageBackground } from 'react-native';
 
-const HomeScreen = () => {
+<Header
+  leftComponent={{ icon: 'menu', color: '#fff' }}
+  centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
+  rightComponent={{ icon: 'home', color: '#fff' }}
+/>
+
+const HomeScreen = ({ navigation }) => {
+    
     return (
-        <View>
+        <View style = {{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
             <Text> Home Screen </Text>
-            <Button
-                title = "Go to Component Screen"
-                onPress={()=> console.log("Button 1 pressed")}
+            <Button 
+                title="Pakaian Adat"
+                onPress={()=> navigation.navigate('Pakaian')}
             />
-            <Button
-                title = "Go to Student Screen"
-                onPress={()=> console.log("Button 1 pressed")}
+            <Button 
+                title="About"
+                onPress={()=> navigation.navigate('About')}
             />
+            <Button 
+                title="Exit"
+                onPress={()=> navigation.navigate('Exit')}
+            />
+
         </View>
-    )
-}
+        
+    );
+};
+
+export default HomeScreen;

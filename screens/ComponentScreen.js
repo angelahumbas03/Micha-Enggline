@@ -1,39 +1,59 @@
 import React from 'react';
-import { Text, StyleSheet, View, Image } from 'react-native';
+import { Text, View, FlatList, StyleSheet, Image, Button, Alert} from 'react-native';
+import Constants from 'expo-constants';
+
+const Pakaian = [
+    
+{ name: 'Bajang', imageUrl: 'https://www.sejarah-negara.com/wp-content/uploads/2018/05/Pakaian-Adat-Bolaang-Mangondow-1.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Minahasa'},
+{ name: 'Laku Tepu', imageUrl: 'https://www.sejarah-negara.com/wp-content/uploads/2018/05/Pakaian-Adat-Minahasa-1.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Sangihe dan Talaud'},
+{ name: '', imageUrl: 'https://i0.wp.com/perpustakaan.id/wp-content/uploads/2018/09/baju-adat-bolaang-mongondow-768x519.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Bolaang Mongondow'}
+{ name: 'Lanut', imageUrl: 'https://i0.wp.com/perpustakaan.id/wp-content/uploads/2018/09/baju-adat-bolaang-mongondow-768x519.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Bolaang Mongondow'}
+{ name: 'Lanut', imageUrl: 'https://i0.wp.com/perpustakaan.id/wp-content/uploads/2018/09/baju-adat-bolaang-mongondow-768x519.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Bolaang Mongondow'}
+{ name: 'Lanut', imageUrl: 'https://i0.wp.com/perpustakaan.id/wp-content/uploads/2018/09/baju-adat-bolaang-mongondow-768x519.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Bolaang Mongondow'}
+{ name: 'Lanut', imageUrl: 'https://i0.wp.com/perpustakaan.id/wp-content/uploads/2018/09/baju-adat-bolaang-mongondow-768x519.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Bolaang Mongondow'}
+{ name: 'Lanut', imageUrl: 'https://i0.wp.com/perpustakaan.id/wp-content/uploads/2018/09/baju-adat-bolaang-mongondow-768x519.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Bolaang Mongondow'}
+{ name: 'Lanut', imageUrl: 'https://i0.wp.com/perpustakaan.id/wp-content/uploads/2018/09/baju-adat-bolaang-mongondow-768x519.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Bolaang Mongondow'}
+
+   
+];
 
 const ComponentScreen = () => {
-
-    const myName = 'John Doe';
-    const helloWorld = <Text>Hello World</Text>;
-
     return (
-        <View>
-            <Image 
-                style={{width: 50, height: 50}}
-                source={{uri: 'https://facebook.github.io/react-native/img/tiny_logo.png'}}
-            />
-            <Text style={styles.textStyle}> 
-                This is component Screen 
-            </Text>
-            <Text style={styles.textStyle2}>
-                {myName}
-            </Text>
-            {helloWorld}
-        </View> 
+        
+        <FlatList 
+            data={Pakaian}
+            renderItem={({ item })=>
+                
+                <View style={styles.textStyle}>
+                    <Image 
+                        style={{width: 378, height: 340}}
+                        source={{uri: item.imageUrl}}
+                    />
+                    
+                    <Button
+                        color="#f194ff"
+                        title={item.name}
+                        onPress={() => Alert.alert(item.Description)}
+                    />
+                    
+                    
+                </View>
+                }
+                
+            keyExtractor={item => item.name}
+            
+        />
     );
 };
 
 const styles = StyleSheet.create({
-    textStyle: {
-        fontSize: 26,
-        color: 'green'
-    },
-    textStyle2: {
-        fontSize: 26,
-        color: 'red'
-    }
+    textStyle:{
+        textAlign: 'center',
+        marginVertical: 8,
+        flex: 1,
+        marginTop: Constants.statusBarHeight,
+        marginHorizontal: 16,
+    },    
 });
 
 export default ComponentScreen;
-
-
