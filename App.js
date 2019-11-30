@@ -1,22 +1,26 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import ComponentScreen from './screens/ComponentScreen';
-import HomeScreen from './screens/HomeScreen';
-import AboutScreen from './screens/AboutScreen';
+import HomeScreen from './screen/HomeScreen';
+import ImageScreen from './screen/ImageScreen';
+import PakaianScreen from './screen/PakaianScreen';
+import LoginScreen from './screen/LoginScreen';
+import VideoScreen from './screen/VideoScreen';
+import AboutScreen from './screen/AboutScreen';
+
 
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-
 const navigator = createStackNavigator({
-  Component: ComponentScreen,
   Home: HomeScreen,
-  About: AboutScreen
-
-
+  Image: ImageScreen,
+  Pakaian: PakaianScreen,
+  Login: LoginScreen,
+  Video: VideoScreen,
+  About: AboutScreen,
 },{
-  initialRouteName: 'Home',
+  initialRouteName: 'Login',
   defaultNavigationOptions: {
-    headerTitle: 'Pakaian Adat Sulut APP'
+    headerTitle: 'Pakaian Adat'
   }
 });
 
