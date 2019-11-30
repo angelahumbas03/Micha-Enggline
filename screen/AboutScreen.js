@@ -4,14 +4,13 @@ import { Text, StyleSheet, View, Image } from 'react-native';
 const AboutScreen = () => {
 
     const myName = 'Final Project Multiplatform';
-    const helloWorld = <Text>Nama Kelompok : </Text>;
+    const helloWorld = <Text>Group by : </Text>;
 
     return (
         <View>
-
             <Text style={styles.textStyle}> 
-                Humbas, Engglin Angela Theresia
-                Kalalo, Micha Adeleid Tisyana 
+                Humbas, Engglin Angela
+                Kalalo, Micha 
             </Text>
             <Text style={styles.textStyle2}>
                 {myName}

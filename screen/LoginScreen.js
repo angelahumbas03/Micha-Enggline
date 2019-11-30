@@ -15,7 +15,7 @@ class Login extends React.Component {
     }
 
     handleLogin(e) {
-        if (this.state.username !== 'test') {
+        if (this.state.username !== '1234') {
             this.setState({ message: "Wrong Email!" });
             return ;
         }
@@ -38,7 +38,7 @@ class Login extends React.Component {
 
     render() {
         return (
-            <View style={{ flex: 1, paddingHorizontal: 30, justifyContent: "center"}}>
+            <View style={{ flex: 1, paddingHorizontal: 30, justifyContent: "center", color: "red"}}>
                 <Image 
                     style={{width: "51%", height: "22%", alignSelf: "center" }}
                     source={require('../assets/userr.png')}

@@ -20,10 +20,9 @@ export default class Menu extends Component {
     super(props);
     this.state = {
       data: [
-        {id:0,  title: "Pakaian Adat", screen: "Pakaian", color:"#f0311f", image:"http://www.persagi-aceh.org/portal/wp-content/uploads/2016/01/aneuk-aceh-transparant-mbkaos.png"},
-        {id:1,  title: "Video Daerah", screen: "Video", color:"#4287f5", image:"https://www.pngrepo.com/png/193818/170/video-player-movie.png", color:"#4287f5"} ,
-        {id:2,  title: "About", screen: "About", color:"#FF69B4", image:"https://www.pngrepo.com/png/11026/170/female-journalist-talking-about-science-news.png"} ,
-        {id:3,  title: "Log Out", screen: "Login", color:"#E8FF3D", image: "https://www.pngrepo.com/png/55650/170/logout.png"} ,
+        {id:2,  title: "Pakaian Adat", screen: "Pakaian", color:"#f0311f", image:"http://www.persagi-aceh.org/portal/wp-content/uploads/2016/01/aneuk-aceh-transparant-mbkaos.png"},
+        {id:3,  title: "About", screen: "About", color:"#4BCF3C", image:"https://www.pngrepo.com/png/11026/170/female-journalist-talking-about-science-news.png"} ,
+        {id:4,  title: "Exit", screen: "Login", color:"#E8FF3D", image: "https://www.pngrepo.com/png/55650/170/logout.png"} ,
       ]
     };
   }
@@ -36,14 +35,6 @@ export default class Menu extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity style={[styles.card, {backgroundColor:this.state.data[0].color}]} onPress={() => {this.clickEventListener(this.state.data[0].screen)}}>
-            <Image style={styles.cardImage} source={{uri:this.state.data[0].image}}/>
-            <Text style={styles.title}>{this.state.data[0].title}</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.card, {backgroundColor:this.state.data[1].color}]} onPress={() => {this.clickEventListener(this.state.data[1].screen)}}>
-            <Image style={styles.cardImage} source={{uri:this.state.data[1].image}}/>
-            <Text style={styles.title}>{this.state.data[1].title}</Text>
-        </TouchableOpacity>
         <TouchableOpacity style={[styles.card, {backgroundColor:this.state.data[2].color}]} onPress={() => {this.clickEventListener(this.state.data[2].screen)}}>
             <Image style={styles.cardImage} source={{uri:this.state.data[2].image}}/>
             <Text style={styles.title}>{this.state.data[2].title}</Text>
@@ -51,6 +42,10 @@ export default class Menu extends Component {
         <TouchableOpacity style={[styles.card, {backgroundColor:this.state.data[3].color}]} onPress={() => {this.clickEventListener(this.state.data[3].screen)}}>
             <Image style={styles.cardImage} source={{uri:this.state.data[3].image}}/>
             <Text style={styles.title}>{this.state.data[3].title}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.card, {backgroundColor:this.state.data[4].color}]} onPress={() => {this.clickEventListener(this.state.data[4].screen)}}>
+            <Image style={styles.cardImage} source={{uri:this.state.data[4].image}}/>
+            <Text style={styles.title}>{this.state.data[4].title}</Text>
         </TouchableOpacity>
       </View>
     );
@@ -65,7 +60,7 @@ const styles = StyleSheet.create({
   list: {
     //paddingHorizontal: 5,
     backgroundColor:"#346EC9",
-  },  
+  },
 
   /******** card **************/
   card:{
