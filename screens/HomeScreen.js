@@ -1,23 +1,18 @@
 import React from 'react';
-import { 
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-} from 'react-native';
+import { View, Text, Button, ImageBackground, StyleSheet, TouchableOpacity, Image} from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
     
     return (
         <View style={styles.homeLayout}> 
           <View style={styles.column}>
-            <TouchableOpacity style={[styles.buttonContainer, styles.pakaianButton]} onPress={() => navigation.navigate('Cewek')}>
+            <TouchableOpacity style={[styles.buttonContainer, styles.pakaianButton]} onPress={() => navigation.navigate('Pakian')}>
               <Text style={styles.textCentered}>Pakaian Adat</Text>
             </TouchableOpacity>
           </View>
   
           <View style={styles.column}>
-            <TouchableOpacity style={[styles.buttonContainer, styles.buttonButton]} onPress={() => navigation.navigate('TentangAplikasi')}>
+            <TouchableOpacity style={[styles.buttonContainer, styles.aboutnButton]} onPress={() => navigation.navigate('About')}>
               <Text style={styles.textCentered}>About</Text>
             </TouchableOpacity>
           </View>
@@ -51,18 +46,9 @@ const styles = StyleSheet.create({
       width:150,
       borderRadius:100,
     },
+
     pakaianButton: {
         backgroundColor: "#FFC0CB",
-          justifyContent: 'center',
-          alignItems: 'center',
-        shadowColor: "#FF007F",
-        shadowOffset: {
-          width: 0,
-          height: 9,
-        },
-        
-      buttonButton: {
-        backgroundColor: "#778899",
           justifyContent: 'center',
           alignItems: 'center',
         shadowColor: "#FF007F",
@@ -76,7 +62,22 @@ const styles = StyleSheet.create({
     
         elevation: 19,
       },
-      
+      aboutButton: {
+        backgroundColor: "#778899",
+          justifyContent: 'center',
+          alignItems: 'center',
+        shadowColor: "#FF007F",
+        shadowOffset: {
+          width: 0,
+          height: 9,
+        },
+
+        shadowOpacity: 0.50,
+        shadowRadius: 12.35,
+    
+        elevation: 19,
+      },
+ 
   }); 
 
 export default HomeScreen;
