@@ -3,23 +3,17 @@ import { Text, StyleSheet, View, Image } from 'react-native';
 
 const AboutScreen = () => {
 
-    const myName = 'Final Project Multiplatform Programming';
-    const name1 = <Text>Humbas, Engglin Angela Theresia</Text>;
+    const myName = 'Final Project Multiplatform';
+    const name = <Text>Humbas, Engglin Angela Theresia</Text>;
     const name2 = <Text>Kalalo, Micha Adeleid Tisyana</Text>;
 
-
     return (
-        <View style={styles.AboutAppLayout}>
+        <View style={styles.AboutLayout}>
             <View style={styles.column}>
-            </View>
-            <View style={styles.column}>
-                <Text style={styles.textStyle}> 
-                    Final Project Mobile Development
-                </Text>
                 <Text style={styles.textStyle2}>
                     {myName}
                 </Text>
-                {name1}
+                {name}
                 {name2}
             </View>
         </View> 
@@ -27,7 +21,7 @@ const AboutScreen = () => {
 };
 
 const styles = StyleSheet.create({
-    AboutAppLayout: {
+    AboutLayout: {
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',

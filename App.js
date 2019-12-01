@@ -1,19 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import HomeScreen from './screen/HomeScreen';
-import LoginScreen from './screen/LoginScreen';
-import PakaianScreen from './screen/PakaianScreen';
-import AboutScreen from './screen/AboutScreen';
+import AboutScreen from './screens/AboutScreen';
+import HomeScreen from './screens/HomeScreen';
+import PakaianScreen from './screens/PakaianScreen';
+import DescScreen from './screens/DescScreen';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-const navigator = createStackNavigator({
-  Home: HomeScreen,
-  Login: LoginScreen,
-  Pakaian: PakaianScreen,
-  About: AboutScreen,
 
+const navigator = createStackNavigator({
+  About: AboutScreen,
+  Pakaian: PakaianScreen,
+  Home: HomeScreen,
+  Desc: DescScreen,
 },{
-  initialRouteName: 'Login',
+  initialRouteName: 'Home',
   defaultNavigationOptions: {
     headerTitle: 'Pakaian Adat'
   }
