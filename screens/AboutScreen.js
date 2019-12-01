@@ -1,5 +1,10 @@
 import React from 'react';
-import { Text, StyleSheet, View, Image } from 'react-native';
+import { 
+    Text, 
+    StyleSheet, 
+    View, 
+    Image 
+} from 'react-native';
 
 const AboutScreen = () => {
 
@@ -40,7 +45,7 @@ const styles = StyleSheet.create({
     },
     textStyle2: {
         fontSize: 22,
-        color: 'red'
+        color: '#d62044'
     }
 });
 

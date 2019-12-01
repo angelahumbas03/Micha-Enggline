@@ -6,13 +6,13 @@ const HomeScreen = ({ navigation }) => {
     return (
         <View style={styles.homeLayout}> 
           <View style={styles.column}>
-            <TouchableOpacity style={[styles.buttonContainer, styles.pakaianButton]} onPress={() => navigation.navigate('Pakian')}>
-              <Text style={styles.textCentered}>Pakaian Adat</Text>
+            <TouchableOpacity style={[styles.buttonContainer, styles.pakaianButton]} onPress={() => navigation.navigate('Pakaian')}>
+          <Text style={styles.textCentered}>Pakaian Adat</Text>
             </TouchableOpacity>
           </View>
   
           <View style={styles.column}>
-            <TouchableOpacity style={[styles.buttonContainer, styles.aboutnButton]} onPress={() => navigation.navigate('About')}>
+            <TouchableOpacity style={[styles.buttonContainer, styles.aboutButton]} onPress={() => navigation.navigate('About')}>
               <Text style={styles.textCentered}>About</Text>
             </TouchableOpacity>
           </View>
@@ -37,24 +37,24 @@ const styles = StyleSheet.create({
       alignItems: 'center',
     },
     buttonContainer: {
-      height:150,
+      height:120,
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: 50,
-      marginHorizontal: 10,
-      marginBottom:50,
-      width:150,
+      marginTop: 25,
+      marginHorizontal: 50,
+      marginBottom:5,
+      width:300,
       borderRadius:100,
     },
 
     pakaianButton: {
-        backgroundColor: "#FFC0CB",
-          justifyContent: 'center',
-          alignItems: 'center',
-        shadowColor: "#FF007F",
-        shadowOffset: {
-          width: 0,
-          height: 9,
+      backgroundColor: "#d62044",
+      justifyContent: 'center',
+      alignItems: 'center',
+      shadowColor: "#FF007F",
+      shadowOffset: {
+        width: 0,
+        height: 9,
         },
         
         shadowOpacity: 0.50,
@@ -63,13 +63,13 @@ const styles = StyleSheet.create({
         elevation: 19,
       },
       aboutButton: {
-        backgroundColor: "#778899",
-          justifyContent: 'center',
-          alignItems: 'center',
+        backgroundColor: "#f5f12f",
+        justifyContent: 'center',
+        alignItems: 'center',
         shadowColor: "#FF007F",
         shadowOffset: {
-          width: 0,
-          height: 9,
+        width: 0,
+        height: 9,
         },
 
         shadowOpacity: 0.50,
