@@ -22,13 +22,11 @@ export default class ProductDetail extends Component {
       <View style={styles.container}>
         <ScrollView>
           <View style={{alignItems:'center', marginHorizontal:30}}>
-          <Text style={styles.name}>Sulawesi Utara</Text>
-          <Text style={styles.name}>Suku Minahasa</Text>
-            <Image style={styles.productImg} source={{uri:"https://i0.wp.com/www.silontong.com/wp-content/uploads/2018/10/Informasi-terkait-dengan-Pakaian-Adat-Bajang-Sulawesi-Utara-yang-Unik.jpg?w=314&ssl=1"}}/>
-            
-            <Text style={styles.name}>Bajang</Text>
+          <Text style={styles.name}>Jawa Tengah</Text>
+            <Image style={styles.productImg} source={{uri:"https://i0.wp.com/www.romadecade.org/wp-content/uploads/2018/09/pakaian-adat-jawa-Jawi-Jangkep.jpg?w=800&ssl=1"}}/> 
+            <Text style={styles.name}>Jawi Jangkep</Text>
             <Text style={styles.description}>
-            Bukan tanpa sebab suku Minahasa memiliki pakaian adat yang menjadi ciri khas dari daerah provinsi Sulawesi Utara. Rupanya suku Minahasa mendiami wilayah di sekitar semenanjung Sulawesi Utara (Sulut). Berdasarkan laporan sejarah, suku tersebut dikenal memiliki peradaban lebih maju daripada suku lainnya pada masa lampau. Beberapa bukti menunjukkan hal tersebut, seperti dari aspek pengetahuan dan keterampilan masyarakat dalam memintal kapas menjadi kain yang lebih nyaman dipakai untuk busana sehari-hari. Pakaian inilah yang disebut dengan nama Bajang.
+            Jawi Jangkep secara resmi terdaftar sebagai pakaian adat Provinsi Jawa Tengah. Sama halnya seperti kebaya yang khusus dikenakan oleh kaum perempuan, Jawi Jangkep dikhususkan untuk kaum pria. Pakaian ini berasal dari adat Keraton Kasunanan Surakarta. Jawi Jangkep sendiri memiliki 2 jenis, yaitu Jawi Jangkep dan Jawi Jangkep padintenan (keseharian). Jawi Jangkep mengkhususkan penggunaan atasan hitam yang hanya boleh dikenakan pada acara formal. Sedangkan Jawi Jangkep padintenan mengenakan atasan berwarna selain hitam yang boleh dikenakan pada acara non formal.
             </Text>
           </View>
         </ScrollView>

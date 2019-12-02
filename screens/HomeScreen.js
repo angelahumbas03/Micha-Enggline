@@ -10,6 +10,12 @@ const HomeScreen = ({ navigation }) => {
           <Text style={styles.textCentered}>Pakaian Adat</Text>
             </TouchableOpacity>
           </View>
+
+          <View style={styles.column}>
+            <TouchableOpacity style={[styles.buttonContainer, styles.videoButton]} onPress={() => navigation.navigate('Video')}>
+              <Text style={styles.textCentered}>Video</Text>
+            </TouchableOpacity>
+          </View>
   
           <View style={styles.column}>
             <TouchableOpacity style={[styles.buttonContainer, styles.aboutButton]} onPress={() => navigation.navigate('About')}>
@@ -62,6 +68,21 @@ const styles = StyleSheet.create({
     
         elevation: 19,
       },
+      videoButton: {
+        backgroundColor: "#3676f5",
+        justifyContent: 'center',
+        alignItems: 'center',
+        shadowColor: "#FF007F",
+        shadowOffset: {
+          width: 0,
+          height: 9,
+          },
+          
+          shadowOpacity: 0.50,
+          shadowRadius: 12.35,
+      
+          elevation: 19,
+        },
       aboutButton: {
         backgroundColor: "#f5f12f",
         justifyContent: 'center',

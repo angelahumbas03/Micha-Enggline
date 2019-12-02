@@ -22,13 +22,14 @@ export default class ProductDetail extends Component {
       <View style={styles.container}>
         <ScrollView>
           <View style={{alignItems:'center', marginHorizontal:30}}>
-          <Text style={styles.name}>Sulawesi Utara</Text>
-          <Text style={styles.name}>Suku Minahasa</Text>
-            <Image style={styles.productImg} source={{uri:"https://i0.wp.com/www.silontong.com/wp-content/uploads/2018/10/Informasi-terkait-dengan-Pakaian-Adat-Bajang-Sulawesi-Utara-yang-Unik.jpg?w=314&ssl=1"}}/>
-            
-            <Text style={styles.name}>Bajang</Text>
+          <Text style={styles.name}>Sumatera Utara</Text>
+          <Text style={styles.name}>Suku Batak Toba</Text>
+            <Image style={styles.productImg} source={{uri:"https://i0.wp.com/www.romadecade.org/wp-content/uploads/2018/09/pakaian-adat-SUmatera-Utara-Batak.jpg?w=619&ssl=1"}}/>            
+            <Text style={styles.name}>Ulos</Text>
             <Text style={styles.description}>
-            Bukan tanpa sebab suku Minahasa memiliki pakaian adat yang menjadi ciri khas dari daerah provinsi Sulawesi Utara. Rupanya suku Minahasa mendiami wilayah di sekitar semenanjung Sulawesi Utara (Sulut). Berdasarkan laporan sejarah, suku tersebut dikenal memiliki peradaban lebih maju daripada suku lainnya pada masa lampau. Beberapa bukti menunjukkan hal tersebut, seperti dari aspek pengetahuan dan keterampilan masyarakat dalam memintal kapas menjadi kain yang lebih nyaman dipakai untuk busana sehari-hari. Pakaian inilah yang disebut dengan nama Bajang.
+            Pakaian adat suku Batak Toba merupakan kain tenun atau yang dikenal dengan nama Ulos. Kain ulos sendiri merupakan kain yang sering sekali dijadikan ciri khas suku Batak. Bahkan, ulos sudah menjadi identitas dari pakaian adat Sumatera Utara tingkat nasional.
+Kain ulos dibuat dengan cara ditenun secara manual menggunakan alat tradisional dan benang sutra. Warna benang yang digunakan biasanya hitam, putih, perak, merah dan emas.
+Pakaian adat ini tidak hanya digunakan di upacara adat saja melainkan juga dalam kehidupan sehari – hari. Ulos yang digunakan oleh laki-laki disebut hande-hande untuk bagian atas. Dan singkot untuk bagian bawahnya. Sedangkan untuk bagian kepala disebut bulang-bulang, detat atau tali-tali.
             </Text>
           </View>
         </ScrollView>

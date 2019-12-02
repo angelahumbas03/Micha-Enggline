@@ -22,19 +22,15 @@ export default class ProductDetail extends Component {
       <View style={styles.container}>
         <ScrollView>
           <View style={{alignItems:'center', marginHorizontal:30}}>
-            <Image style={styles.productImg} source={{uri:"https://www.sejarah-negara.com/wp-content/uploads/2018/03/Pakaian-Adat-Suku-Kaili-Sulawesi-Tengah-1.jpg"}}/>
-            <Text style={styles.name}>Sulawesi Tengah</Text>
+          <Text style={styles.name}>Sulawesi Tengah</Text>
+          <Text style={styles.name}>Suku Mori</Text>
+            <Image style={styles.productImg} source={{uri:"https://www.sejarah-negara.com/wp-content/uploads/2018/05/Pakaian-Adat-Suku-Mori-1.jpg"}}/>
+            
+            <Text style={styles.name}>Lambu</Text>
             <Text style={styles.description}>
-            Namun, untuk pakaian adat Sulawesi Tengah, kita hanya dapat merujuk pada pakaian adat suku Kaili bernama Baju Nggembe dan Baju Koje. Baju ini merupakan baju adat khusus wanita atau remaja putri, sedangkan baju adat prianya disebut Baju Koje. Baju Nggembe dan Baju Koje biasanya hanya dikenakan pada saat pesta dan upacara adat. 
+            Suku Mori merupakan suku yang berada di daerah sekitar Kabupaten Morowali. Suku ini mempunyai pakaian adat dengan nama Lambu. Pakaian adat ini untuk wanitanya terdiri dari beberapa pernik yaitu blus berlengan panjang dan rok panjang berwarna merah serta aksesoris lain.
             </Text>
           </View>
-
-          {/* <View style={styles.separator}></View>
-          <View style={styles.addToCarContainer}>
-            <TouchableOpacity style={styles.shareButton} onPress={()=> this.clickEventListener()}>
-              <Text style={styles.shareButtonText}>Back</Text>  
-            </TouchableOpacity>
-          </View>  */}
         </ScrollView>
       </View>
     );

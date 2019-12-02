@@ -22,13 +22,12 @@ export default class ProductDetail extends Component {
       <View style={styles.container}>
         <ScrollView>
           <View style={{alignItems:'center', marginHorizontal:30}}>
-          <Text style={styles.name}>Sulawesi Utara</Text>
-          <Text style={styles.name}>Suku Minahasa</Text>
-            <Image style={styles.productImg} source={{uri:"https://i0.wp.com/www.silontong.com/wp-content/uploads/2018/10/Informasi-terkait-dengan-Pakaian-Adat-Bajang-Sulawesi-Utara-yang-Unik.jpg?w=314&ssl=1"}}/>
-            
-            <Text style={styles.name}>Bajang</Text>
+          <Text style={styles.name}>Kepulauan Riau</Text>
+            <Image style={styles.productImg} source={{uri:"https://i0.wp.com/www.silontong.com/wp-content/uploads/2018/10/Informasi-terkait-dengan-Pakaian-Adat-Bajang-Sulawesi-Utara-yang-Unik.jpg?w=314&ssl=1"}}/> 
+            <Text style={styles.name}>Kebaya Labuh dan Teluk Balangga</Text>
+
             <Text style={styles.description}>
-            Bukan tanpa sebab suku Minahasa memiliki pakaian adat yang menjadi ciri khas dari daerah provinsi Sulawesi Utara. Rupanya suku Minahasa mendiami wilayah di sekitar semenanjung Sulawesi Utara (Sulut). Berdasarkan laporan sejarah, suku tersebut dikenal memiliki peradaban lebih maju daripada suku lainnya pada masa lampau. Beberapa bukti menunjukkan hal tersebut, seperti dari aspek pengetahuan dan keterampilan masyarakat dalam memintal kapas menjadi kain yang lebih nyaman dipakai untuk busana sehari-hari. Pakaian inilah yang disebut dengan nama Bajang.
+            Kebaya Labuh merupakan pakaian adat wanita yang biasa dikenakan pada saat upacara adat. Selain itu pakaian ini juga digunakan pada banyak kesempatan acara-acara resmi. Pakaian ini bisa digunakan pada saat upacara pernikahan. Di Riau, busana untuk wanita dikenal dengan sebutan Kebaya Labuh. Jenis pakaian adat Kebaya Labuh merupakan salah satu jenis busana kurung yang banyak dipakai oleh masyarakat suku Melayu seperti halnya di Riau ini
             </Text>
           </View>
         </ScrollView>

@@ -22,13 +22,12 @@ export default class ProductDetail extends Component {
       <View style={styles.container}>
         <ScrollView>
           <View style={{alignItems:'center', marginHorizontal:30}}>
-          <Text style={styles.name}>Sulawesi Utara</Text>
-          <Text style={styles.name}>Suku Minahasa</Text>
-            <Image style={styles.productImg} source={{uri:"https://i0.wp.com/www.silontong.com/wp-content/uploads/2018/10/Informasi-terkait-dengan-Pakaian-Adat-Bajang-Sulawesi-Utara-yang-Unik.jpg?w=314&ssl=1"}}/>
-            
-            <Text style={styles.name}>Bajang</Text>
+          <Text style={styles.name}>Sulawesi Selatan</Text>
+          <Text style={styles.name}>Suku Mandar</Text>
+            <Image style={styles.productImg} source={{uri:"https://i0.wp.com/borneochannel.com/wp-content/uploads/2018/12/Tarian-Patuqtu.jpg?w=800&ssl=1"}}/>
+            <Text style={styles.name}>Pattuqdu Towaine</Text>
             <Text style={styles.description}>
-            Bukan tanpa sebab suku Minahasa memiliki pakaian adat yang menjadi ciri khas dari daerah provinsi Sulawesi Utara. Rupanya suku Minahasa mendiami wilayah di sekitar semenanjung Sulawesi Utara (Sulut). Berdasarkan laporan sejarah, suku tersebut dikenal memiliki peradaban lebih maju daripada suku lainnya pada masa lampau. Beberapa bukti menunjukkan hal tersebut, seperti dari aspek pengetahuan dan keterampilan masyarakat dalam memintal kapas menjadi kain yang lebih nyaman dipakai untuk busana sehari-hari. Pakaian inilah yang disebut dengan nama Bajang.
+            Busana Patuqduq terdiri dari kombinasi baju rawang boko, lipaq saqbe mandar, lipaq aqdi dirrate, lipaq aqdi dirrate duattodong, serta aksesoris yang menghiasi kepala, badan, dan tangan si pemakai yang khas dengan adat Mandar.
             </Text>
           </View>
         </ScrollView>
