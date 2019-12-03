@@ -1,104 +1,95 @@
-import React from 'react';
-import { View, Text, Button, ImageBackground, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import React, { Component } from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+  Alert,
+  ScrollView,
+  FlatList,
+  Dimensions
+} from 'react-native';
 
-const HomeScreen = ({ navigation }) => {
-    
+
+var {height, width} = Dimensions.get('window');
+
+export default class Menu extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [
+        {id:2,  title: "Pakaian Adat", screen: "Traditional", color:"#f2c64b", image:"http://2.bp.blogspot.com/-xcuHQPJbvoY/VpUaesryQ0I/AAAAAAAAABg/elvovP6J5ls/s1600/DSC_0341%2Bcopy.png"},
+        {id:3,  title: "About", screen: "Component", color:"#f2c64b", image:"https://www.pngrepo.com/png/11026/72/female-journalist-talking-about-science-news.png"} ,
+        {id:4,  title: "Log Out", screen: "Login", color:"#f2c64b", image: "https://www.pngrepo.com/png/92820/72/log-out.png"} ,
+      ]
+    };
+  }
+
+  clickEventListener(screenName) {
+
+    this.props.navigation.navigate(screenName)
+  }
+
+  render() {
     return (
-        <View style={styles.homeLayout}> 
-          <View style={styles.column}>
-            <TouchableOpacity style={[styles.buttonContainer, styles.pakaianButton]} onPress={() => navigation.navigate('Pakaian')}>
-          <Text style={styles.textCentered}>Pakaian Adat</Text>
-            </TouchableOpacity>
-          </View>
-
-          <View style={styles.column}>
-            <TouchableOpacity style={[styles.buttonContainer, styles.videoButton]} onPress={() => navigation.navigate('Video')}>
-              <Text style={styles.textCentered}>Video</Text>
-            </TouchableOpacity>
-          </View>
-  
-          <View style={styles.column}>
-            <TouchableOpacity style={[styles.buttonContainer, styles.aboutButton]} onPress={() => navigation.navigate('About')}>
-              <Text style={styles.textCentered}>About</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-        
+      <View style={styles.container}>
+        <TouchableOpacity style={[styles.card, {backgroundColor:this.state.data[0].color}]} onPress={() => {this.clickEventListener(this.state.data[0].screen)}}>
+            <Image style={styles.cardImage} source={{uri:this.state.data[0].image}}/>
+            <Text style={styles.title}>{this.state.data[0].title}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.card, {backgroundColor:this.state.data[1].color}]} onPress={() => {this.clickEventListener(this.state.data[1].screen)}}>
+            <Image style={styles.cardImage} source={{uri:this.state.data[1].image}}/>
+            <Text style={styles.title}>{this.state.data[1].title}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.card, {backgroundColor:this.state.data[2].color}]} onPress={() => {this.clickEventListener(this.state.data[2].screen)}}>
+            <Image style={styles.cardImage} source={{uri:this.state.data[2].image}}/>
+            <Text style={styles.title}>{this.state.data[2].title}</Text>
+        </TouchableOpacity>
+      </View>
     );
-};
-const resizeMode = 'center';
+  }
+}
 
 const styles = StyleSheet.create({
-    homeLayout: {
-      flex: 1,
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center'
-    },
-    column: {
-      flex: 1,
-      width: 100,
-      flexDirection: 'row',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    buttonContainer: {
-      height:120,
-      justifyContent: 'center',
-      alignItems: 'center',
-      marginTop: 25,
-      marginHorizontal: 50,
-      marginBottom:5,
-      width:300,
-      borderRadius:100,
-    },
+  container:{
+    flex:1,
+    marginTop:20,
+  },
+  list: {
+    //paddingHorizontal: 5,
+    backgroundColor:"#346EC9",
+  },
 
-    pakaianButton: {
-      backgroundColor: "#d62044",
-      justifyContent: 'center',
-      alignItems: 'center',
-      shadowColor: "#FF007F",
-      shadowOffset: {
-        width: 0,
-        height: 9,
-        },
-        
-        shadowOpacity: 0.50,
-        shadowRadius: 12.35,
-    
-        elevation: 19,
-      },
-      videoButton: {
-        backgroundColor: "#3676f5",
-        justifyContent: 'center',
-        alignItems: 'center',
-        shadowColor: "#FF007F",
-        shadowOffset: {
-          width: 0,
-          height: 9,
-          },
-          
-          shadowOpacity: 0.50,
-          shadowRadius: 12.35,
-      
-          elevation: 19,
-        },
-      aboutButton: {
-        backgroundColor: "#f5f12f",
-        justifyContent: 'center',
-        alignItems: 'center',
-        shadowColor: "#FF007F",
-        shadowOffset: {
-        width: 0,
-        height: 9,
-        },
+  /******** card **************/
+  card:{
+    width: width,
+    height:150,
+    flexDirection:'row',
+    padding:20,
 
-        shadowOpacity: 0.50,
-        shadowRadius: 12.35,
-    
-        elevation: 19,
-      },
- 
-  }); 
-
-export default HomeScreen;
+    justifyContent: 'center', 
+    alignItems: 'center' 
+  },
+  cardImage:{
+    height: 70,
+    width: 70,
+  },
+  title:{
+    fontSize:28,
+    flex:1,
+    color:"#FFFFFF",
+    fontWeight:'bold',
+    marginLeft:40
+  },
+  subTitle:{
+    fontSize:12,
+    flex:1,
+    color:"#FFFFFF",
+  },
+  icon:{
+    height: 20,
+    width: 20, 
+  }
+}); 

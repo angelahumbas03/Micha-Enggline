@@ -1,59 +1,54 @@
 import React from 'react';
-import { Text, View, FlatList, StyleSheet, Image, Button, Alert} from 'react-native';
-import Constants from 'expo-constants';
+import { 
+    Text, 
+    StyleSheet, 
+    View, 
+    Image 
+} from 'react-native';
 
-const Pakaian = [
-    
-{ name: 'Bajang', imageUrl: 'https://www.sejarah-negara.com/wp-content/uploads/2018/05/Pakaian-Adat-Bolaang-Mangondow-1.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Minahasa'},
-{ name: 'Laku Tepu', imageUrl: 'https://www.sejarah-negara.com/wp-content/uploads/2018/05/Pakaian-Adat-Minahasa-1.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Sangihe dan Talaud'},
-{ name: '', imageUrl: 'https://i0.wp.com/perpustakaan.id/wp-content/uploads/2018/09/baju-adat-bolaang-mongondow-768x519.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Bolaang Mongondow'}
-{ name: 'Lanut', imageUrl: 'https://i0.wp.com/perpustakaan.id/wp-content/uploads/2018/09/baju-adat-bolaang-mongondow-768x519.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Bolaang Mongondow'}
-{ name: 'Lanut', imageUrl: 'https://i0.wp.com/perpustakaan.id/wp-content/uploads/2018/09/baju-adat-bolaang-mongondow-768x519.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Bolaang Mongondow'}
-{ name: 'Lanut', imageUrl: 'https://i0.wp.com/perpustakaan.id/wp-content/uploads/2018/09/baju-adat-bolaang-mongondow-768x519.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Bolaang Mongondow'}
-{ name: 'Lanut', imageUrl: 'https://i0.wp.com/perpustakaan.id/wp-content/uploads/2018/09/baju-adat-bolaang-mongondow-768x519.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Bolaang Mongondow'}
-{ name: 'Lanut', imageUrl: 'https://i0.wp.com/perpustakaan.id/wp-content/uploads/2018/09/baju-adat-bolaang-mongondow-768x519.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Bolaang Mongondow'}
-{ name: 'Lanut', imageUrl: 'https://i0.wp.com/perpustakaan.id/wp-content/uploads/2018/09/baju-adat-bolaang-mongondow-768x519.jpg', Description: 'Deskripsi: Pakaian Adat Sulawesi Utara asal Bolaang Mongondow'}
+const AboutScreen = () => {
 
-   
-];
+    const myName = 'Final Project Multiplatform';
+    const name = <Text>Humbas, Engglin Angela Theresia</Text>;
+    const name2 = <Text>Kalalo, Micha Adeleid Tisyana</Text>;
 
-const ComponentScreen = () => {
     return (
-        
-        <FlatList 
-            data={Pakaian}
-            renderItem={({ item })=>
-                
-                <View style={styles.textStyle}>
-                    <Image 
-                        style={{width: 378, height: 340}}
-                        source={{uri: item.imageUrl}}
-                    />
-                    
-                    <Button
-                        color="#f194ff"
-                        title={item.name}
-                        onPress={() => Alert.alert(item.Description)}
-                    />
-                    
-                    
-                </View>
-                }
-                
-            keyExtractor={item => item.name}
-            
-        />
+        <View style={styles.AboutLayout}>
+            <View style={styles.column}>
+                <Text style={styles.textStyle2}>
+                    {myName}
+                </Text>
+                {name}
+                {name2}
+            </View>
+        </View> 
     );
 };
 
 const styles = StyleSheet.create({
-    textStyle:{
-        textAlign: 'center',
-        marginVertical: 8,
+    AboutLayout: {
         flex: 1,
-        marginTop: Constants.statusBarHeight,
-        marginHorizontal: 16,
-    },    
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    column: {
+        flex: 1,
+        width: "100%",
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    textStyle: {
+        fontSize: 26,
+        color: 'blue'
+    },
+    textStyle2: {
+        fontSize: 22,
+        color: '#d62044'
+    }
 });
 
-export default ComponentScreen;
+export default AboutScreen;
+
+
